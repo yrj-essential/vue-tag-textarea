@@ -11,6 +11,7 @@
       @input="handleInput($event.target)"
     ></div>
     <div class="w-textarea_tools" v-if="tools.length > 0 || maxlength">
+      <slot name="tools"></slot>
       <button class="w-textarea_tools__item"
         v-for="item in tools"
         :key="item.type"
